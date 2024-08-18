@@ -1,0 +1,37 @@
+/* pixelGrid.css */
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(100, 10px);
+    gap: 1px;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+.cellStyle {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border: 1px solid gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cellStyle.hovered {
+    background-color: lightgreen;
+    /* Hover sırasında gösterilen renk */
+}
+
+.cellStyle.selected {
+    background-color: green;
+    /* Seçilen piksellerin rengi */
+}
+
+.cellStyle.displayed {
+    background-color: red;
+    /* Display durumundaki piksellerin rengi */
+    cursor: not-allowed;
+}
